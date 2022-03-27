@@ -1,10 +1,12 @@
 html {
     background-color: #1a1f24dc;
+
 }
 
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: whitesmoke;
+    
 }
 
 h3 {
@@ -31,6 +33,7 @@ h4 {
 
 #indextitle {
     font-family: fantasy;
+    
 }
 
 #topnavhr {
@@ -77,7 +80,6 @@ hr {
 
 .resumediv {
     margin: auto;
-    width: 80%;
 }
 
 
