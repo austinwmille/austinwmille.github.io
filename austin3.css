@@ -6,7 +6,7 @@ html {
 body {
     font-family: Helvetica, Arial, sans-serif;
     color: whitesmoke;
-    
+    height: 100vh;
 }
 
 h3 {
@@ -59,12 +59,12 @@ hr {
 }
 
 #footer {
-    float: bottom;
     margin-top: 5%;
     left: 0;
     bottom: 0;
     width: 100%;
     position: static;
+    height: 40px;
 }
 
 .card {
@@ -122,10 +122,10 @@ hr {
   } 
 
 .fa {
-    padding-left: 25px;
-    padding-right: 25px;
     color: inherit;
     text-decoration: none;
+    text-align: center;
+    margin-left: 2.5%;
 }
 
 .fa:hover {
@@ -134,4 +134,5 @@ hr {
 
 .fa:visited {
     color: inherit;
+    text-decoration: none;
 }
