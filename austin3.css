@@ -9,7 +9,7 @@ body {
     height: 100vh;
 }
 
-h3 {
+#indextitle, #sig {
     margin: 0;
     margin-left: 2.5%;
     margin-top: 1.5%;
@@ -84,6 +84,7 @@ hr {
 
 .resumediv {
     margin: auto;
+    padding-top: 5px;
 }
 
 
