@@ -27,7 +27,7 @@ const randomTexts = [
     "death to the bourgeoisie!",
     "power to the proletariat!",
     "Objectively cooler than you",
-    "only 59 warnings and 19 errors!"
+    "only 59 warnings and 19 errors!",
     "bruh.",
     "kick ass and chew bubblegum",
 ];
