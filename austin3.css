@@ -32,16 +32,6 @@ hr {
     height: 40px;
 }
 
-/* Horizontal rule adjustments for the footer */
-#bothr1, #bothr2 {
-    display: inline-block;
-    margin-bottom: 2%;
-    width: 30%;  /* Adjust width as needed */
-    height: 2px; /* Adjust height for a cleaner look */
-    background-color: whitesmoke;  /* Ensure it matches the overall theme */
-}
-
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(122, 131, 126, 0.5);
     transition: 0.3s;
@@ -72,6 +62,11 @@ hr {
     margin-top: 15px;
 }
 
+.topnav a i {
+    display: block;
+    margin: 0 auto; /* Center the icons */
+}
+
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
@@ -80,10 +75,11 @@ hr {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px; /* Adjust icon size */
 }
 
 /* Change the color of links on hover */
+/* Change color on hover */
 .topnav a:hover {
     background-color: #ddd;
     color: black;
@@ -96,6 +92,7 @@ hr {
 }
 
 /* Hide the link that should open and close the topnav on small screens */
+/* Style for the responsive (hamburger) icon */
 .topnav .icon {
     display: none;
 }
@@ -124,18 +121,24 @@ hr {
 
 /* Style for the Austin Miller text */
 #indextitle {
-    font-family: fantasy;
+    font-family: 'Caveat', cursive;
     margin: 0;
     display: inline;
+    font-size: 2.5em;
 }
 
 /* Style for the .net part */
 #sig {
     font-family: 'Pacifico', cursive;
-    font-style: italic;
-    font-size: 26px;
-    margin-left: 10px;
-    display: inline;
+    font-size: 1.2em;
+    color: #ff66c4; /* Neon pink */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 0 0 8px #ff66c4, 0 0 12px #ff66c4;
+    animation: float 3s ease-in-out infinite;
+    display: inline; /* Ensures the text doesn't push other elements */
+    margin-top: 0;   /* Prevents extra space above the text */
+    margin-bottom: 0;/* Prevents extra space below the text */
+    padding: 0;      /* Ensures no extra padding around the text */
 }
 
 /* Adjust the splash text positioning to avoid overlapping */
@@ -181,21 +184,27 @@ hr {
 
 @media screen and (max-width: 600px) {
     #splashtxt {
-        font-size: 18px;  /* Make the splash text smaller */
+        font-size: 16px;  /* Make the splash text smaller */
         margin-top: 0px;  /* Adjust the margin to prevent overlap */
-        margin-left: 0;  /* Center the splash text on mobile */
-        transform: none;  /* Remove the slant for better readability */
-        text-align: center;  /* Ensure it's centered on mobile */
+        margin-left: 20px;  /* Center the splash text on mobile */
+        /*transform: none;  /* Remove the slant for better readability */
+        text-align: right;  /* Ensure it's centered on mobile */
+        margin-right: 20px;
     }
 
     #sig, #indextitle {
-        margin-left: 10px;  /* Reduce the left margin on mobile */
-        font-size: 20px;  /* Adjust font size to fit better */
+        margin-left: 4px;  /* Reduce the left margin on mobile */
+        font-size: 1.5em;  /* Adjust font size to fit better */
     }
 
     .sigdiv {
         margin-left: 10px;  /* Make sure the name and signature align */
         transform: none;  /* Remove slant for better mobile display */
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
     }
 }
 
@@ -247,4 +256,32 @@ hr {
         font-size: 20px;  /* Adjust size for mobile */
         margin: 10px; /* Add more space if necessary */
     }
+}
+
+/* Whimsical font with neon pink but toned down for readability */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+#sig {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.7em;
+    color: #ff66c4; /* Neon pink */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Soft black shadow for contrast */
+                 0 0 8px #ff66c4, 0 0 12px #ff66c4; /* More subtle neon glow */
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 1px;
+}
+
+#signat {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8em; /* Adjust size as needed */
+    display: inline-block;
+    margin-left: 5px;
 }

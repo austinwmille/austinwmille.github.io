@@ -59,32 +59,25 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar" style="background-color: #333;">
-    <!-- Menu icon for mobile view, hidden on medium and large screens -->
-    <a class="w3-bar-item w3-button w3-hover-light-grey w3-hide-medium w3-hide-large w3-right" 
-       href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars" style="color: #fff;"></i>
+    <!-- Remove the menu icon -->
+    <!-- Navbar links for Top, About, Travel, Contact, and Minecraft pages -->
+    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">
+      <i class="fa fa-arrow-up"></i> Top
     </a>
-    <!-- Navbar links for home, about, portfolio, contact, and minecraft pages -->
-    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">Top</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+    <a href="#about" class="w3-bar-item w3-button" style="color: #fff;">
       <i class="fa fa-user"></i> About
     </a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
-      <i class="fa fa-th"></i> Travel
+    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;">
+      <i class="fa fa-plane"></i> Travel
     </a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
-      <i class="fa fa-envelope"></i> Contact
+    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;">
+      <i class="fa fa-phone"></i> Contact
     </a>
-    <a href="minecraft.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;">
       <i class="fa fa-cube"></i> Minecraft
     </a>
   </div>
-    <!--Hiding the search button because I don't know how it works yet..also there's no need
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-    -->
-  </div>
+</div>
 
   <!-- Navbar for small screens (mobile view), hidden on large and medium screens -->
 <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #333;">
@@ -322,7 +315,7 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" >
   <h3 class="w3-center">Please don't actually contact*</h3>
   <p class="w3-center"><em>*Note excludes high-paying job offerers</em></p>
-  <p>Below is a map of Central-South Florida. It's where I grew up and currently live. It's hot, but I don't plan on leaving any time soon.
+  <p>Below is a map of Central-South Florida. It's where I grew up and currently live. It's hot, so I plan on leaving some time soon. Working on a plan..
     That's not important anyway. What's more relevant are the links to my social media accounts which are <em>below the map</em>, at the bottom of this webpage.
     There you'll find a nearly empty GitHub profile, a barren Twitter account, and a Snapchat QR code which is useless if you have my phone number or email.
   </p>
@@ -398,16 +391,6 @@ function scrollFunction() {
     } else {
         navbar.className = "w3-bar";
         navbar.style.backgroundColor = "#333"; // Ensure dark background at the top as well
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
     }
 }
 </script>
