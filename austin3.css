@@ -65,8 +65,11 @@ hr {
 
 /* Add a black background color to the top navigation */
 .topnav {
+    position: relative; /* Or use 'fixed' if the navbar needs to stick at the top */
+    z-index: 1000;  /* Make sure it's on top of other elements */
     background-color: #333;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 /* Style the links inside the navigation bar */
@@ -154,7 +157,7 @@ hr {
     transform: rotate(-5deg); /* Slight slant for splash text */
     text-shadow: 2px 2px 4px #333;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -31px;
     margin-left: 0%; /* Increase margin-left to push it to the right */
     z-index: 1;
     position: relative;
