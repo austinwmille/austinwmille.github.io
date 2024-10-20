@@ -274,3 +274,37 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     background-color: #555 !important; /* Lighter grey on hover */
     color: #fff !important; /* Keep text white */
 }
+
+/* Make sure the mobile menu dropdown stays at the same scroll position */
+#navDemo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333; /* Same color as your navbar */
+}
+
+/* Center image for non-mobile screens */
+@media screen and (min-width: 601px) {
+    #photo-container {
+        display: flex;
+        justify-content: center; /* Centers the image horizontally */
+        align-items: center; /* Aligns the image vertically if necessary */
+        width: 100%; /* Ensures the container spans the full width */
+        margin: 0 auto; /* Ensures the container is centered */
+    }
+
+    #personal-photo {
+        max-width: 100%; /* Image stays within the container */
+        height: auto; /* Keeps the aspect ratio */
+        display: block; /* Ensures the image behaves as a block element */
+        margin: 0 auto; /* Centers the image within the flex container */
+    }
+}
+
+/* Ensure no extra margins are interfering with centering */
+.w3-col {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Make sure the content inside is centered */
+}

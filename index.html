@@ -65,12 +65,12 @@ body, html {
       <i class="fa fa-bars" style="color: #fff;"></i>
     </a>
     <!-- Navbar links for home, about, portfolio, contact, and minecraft pages -->
-    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">Home</a>
+    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">Top</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
       <i class="fa fa-user"></i> About
     </a>
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
-      <i class="fa fa-th"></i> Projects
+      <i class="fa fa-th"></i> Travel
     </a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
       <i class="fa fa-envelope"></i> Contact
@@ -89,9 +89,9 @@ body, html {
   <!-- Navbar for small screens (mobile view), hidden on large and medium screens -->
 <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #333;">
     <a href="#about" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">About</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Projects</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Contact</a>
-    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Minecraft</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Travel updates</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Contact me</a>
+    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Minecraft page</a>
 
     <!-- Commented-out Search Button for small screens -->
     <!-- 
@@ -185,7 +185,7 @@ body, html {
   </div>
 
   <!-- Explanation Section (After Resume) -->
-<div class="w3-content w3-container w3-padding-32" id="explanation" style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 48px; padding: 16px;">
+<div class="w3-content w3-container w3-padding-32" id="about" style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 48px; padding: 16px;">
   <h4 style="color: #555; text-align: center; font-weight: bold;">More About This Website</h4>
   <p style="color: #333; font-size: 16px; line-height: 1.6;">
     This website is a blend of my professional and personal projects, designed to showcase my skills in various fields. It's an ongoing project that began as a way to practice using AWS and Python for astrophysics-related tasks. 
@@ -207,6 +207,11 @@ body, html {
   <p style="color: #333; font-size: 16px; line-height: 1.6;">
     Lastly, if you read this entire section then I'm sorry. It has absolutely no substance. I literally am just hitting buttons on a keyboard and there is nothing important hidden in the words. What a terrible world we've made for ourselves. If you read all of this section hit me up and I'll mail you a dollar.
   </p>
+</div>
+
+  <!-- Personal Photo Section -->
+<div class="w3-col m6 w3-center w3-padding-large" id="photo-container">
+    <img src="images/imsecretlysanta.jpg" class="w3-round w3-image w3-hover-opacity-off" id="personal-photo" alt="Photo of Me" width="500" height="333">
 </div>
 
   </div>
@@ -383,9 +388,9 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scrollFunction()};
 
-function myFunction() {
+function scrollFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         navbar.className = "w3-bar w3-card w3-animate-top";
