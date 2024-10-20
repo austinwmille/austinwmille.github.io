@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="austin4.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -57,14 +58,27 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
+  <div class="w3-bar" id="myNavbar" style="background-color: #333;">
+    <!-- Menu icon for mobile view, hidden on medium and large screens -->
+    <a class="w3-bar-item w3-button w3-hover-light-grey w3-hide-medium w3-hide-large w3-right" 
+       href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars" style="color: #fff;"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">Home</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Projects</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
+    <!-- Navbar links for home, about, portfolio, contact, and minecraft pages -->
+    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+      <i class="fa fa-user"></i> About
+    </a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+      <i class="fa fa-th"></i> Projects
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+      <i class="fa fa-envelope"></i> Contact
+    </a>
+    <a href="minecraft.html" class="w3-bar-item w3-button w3-hide-small" style="color: #fff;">
+      <i class="fa fa-cube"></i> Minecraft
+    </a>
+  </div>
     <!--Hiding the search button because I don't know how it works yet..also there's no need
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
@@ -72,15 +86,17 @@ body, html {
     -->
   </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">Projects</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
-    <!--Hiding the search button because I don't know how it works yet..also there's no need
+  <!-- Navbar for small screens (mobile view), hidden on large and medium screens -->
+<div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #333;">
+    <a href="#about" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">About</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Projects</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Contact</a>
+    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Minecraft</a>
+
+    <!-- Commented-out Search Button for small screens -->
+    <!-- 
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     -->
-  </div>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
@@ -91,32 +107,108 @@ body, html {
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">About me</h3>
-  <p class="w3-center"><em>I'm looking for a job!</em></p>
-  <p>Below is an older, redacted version of my resume that I used for my first NASA application. I made it to at least the hiring manager's desk, but unfortunately was not the chosen one. 
-    <a href="resume522.pdf">Here</a> is a more recent version if you're interested.
-  </p>
-  <object data="images/nasaresdedact.pdf" type="application/pdf" width="100%" height="1240x" align="center">
-    <p><em>If you're reading this then you can't see my resume. You're probably using a mobile browser. It'll show on a normal computer, but you can skip it.
-         It's not special.</em></p>
-  </object>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="images/meinhat.jpg" class="w3-round w3-image w3-hover-opacity-off" id="personal-photo" alt="Photo of Me" width="500" height="333" >
-    </div>
+<div class="w3-content w3-container w3-padding-32" id="resume" style="background-color: #d9d9d9; border-radius: 8px; margin-bottom: 48px;">
+  <h3 class="w3-center" style="color: #333; padding-bottom: 16px;">A resume</h3>
+  
+  <div class="w3-row-padding" style="font-size: 14px; color: #333;">
+    
+    <!-- Left Column: Personal Info and Education -->
+    <div class="w3-half">
+      <h4 style="color: #FF7043;">Austin W. Miller</h4>
+      <p>Florida | (941) 545-5082 | austinwmille@gmail.com</p>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-padding-large">
-      <p>Thanks for visiting my website. This space is a semi-professional, statically located public display written by and about myself.
-        It is an ongoing project and not particularly serious. I'll talk about its conception here but you can skip it.. it's not important. </p>
-      
-      <p>It started as a way for me to practice using Unix systems and Amazon Web Services. At first my goal was to learn AWS to run some Python code for my Astrophysics classes. 
-         Eventually I strolled through a free course on HTML and CSS. I wrote a basic page and set it up on AWS -- rebuilt it a few times, etc. Nowadays it's hosted on GitHub.
-         The current iterations use templates from W3C. I figured I could learn more by going through experts' code than by writing mine, poorly, from scratch. Anyways here it is. 
-         I edit it all the time and often completely rebuild it. Check back another time if you'd like. 
+      <h5 style="color: #FF7043;">Education</h5>
+      <p>
+        <strong>Johns Hopkins University</strong> <br>
+        M.S. Program in Space Systems Engineering <br>
+        Partial Coursework Dec. 2022 <br>
+      </p>
+      <p>
+        <strong>University of South Florida, Tampa</strong> <br>
+        Bachelor of Science in Physics, May 2020 <br>
+        Minors in Chemistry and Astronomy
+      </p>
+      <p>
+        <strong>State College of Florida, Bradenton</strong> <br>
+        Associate of Arts, May 2017
       </p>
     </div>
+    
+    <!-- Right Column: Skills and Experience -->
+    <div class="w3-half">
+      <h5 style="color: #FF7043;">Skills</h5>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li>Python Programming (4+ years)</li>
+        <li>Data Analysis</li>
+        <li>Electronics Repair</li>
+        <li>Customer Support</li>
+        <li>Excel and Data Management</li>
+        <li>Git, AWS, Unix Systems</li>
+        <li>Server Administration</li>
+        <li>Multitasking and Organization</li>
+      </ul>
+
+      <h5 style="color: #FF7043;">Certifications</h5>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li>CS50 Certificate (Harvard on edX)</li>
+        <li>HTML5 & CSS Certification (W3C on edX)</li>
+        <li>CompTIA A+ Certification</li>
+        <li>Florida Boater's License</li>
+        <li>Safe Food and Alcohol Service</li>
+        <li>CPR and First Aid Certified</li>
+        <li>Member of Astronomy Club at USF 2018-2020</li>
+        <li>Member of American Chemical Society at SCF 2014-2017</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Full-Width Row for Experience -->
+  <div class="w3-row-padding" style="margin-top: 16px; font-size: 14px; color: #333;">
+    <div class="w3-col m12">
+      <h5 style="color: #FF7043;">Experience</h5>
+      <p>
+        <strong>Nips' Tech Solutions (Freelance)</strong>, Remote <br>
+        Freelance Tech Support Specialist | 2022 - Present <br>
+        - Provided tech support, troubleshooting hardware, software, and network issues. <br>
+        - Repaired and refurbished electronic devices such as gaming consoles and computers.
+      </p>
+      <p>
+        <strong>Restaurant Industry (Various Roles)</strong> | 2008 - Present <br>
+        - Worked in diverse roles: waiter, bartender, cook, and BOH manager, gaining extensive customer service experience.
+      </p>
+      <p>
+        <strong>Satchel's Last Resort (Volunteer)</strong> | 2016 - 2017 <br>
+        - Supported administrative duties, responding to inquiries, and assisting in facility operations. <br>
+        - Managed animal records, data entry, and shelter communications.
+      </p>
+    </div>
+  </div>
+
+  <!-- Explanation Section (After Resume) -->
+<div class="w3-content w3-container w3-padding-32" id="explanation" style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 48px; padding: 16px;">
+  <h4 style="color: #555; text-align: center; font-weight: bold;">More About This Website</h4>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    This website is a blend of my professional and personal projects, designed to showcase my skills in various fields. It's an ongoing project that began as a way to practice using AWS and Python for astrophysics-related tasks. 
+    Over time, I incorporated front-end web development skills, using templates and improving my design through trial and error. You'll find a mix of personal projects, experiments, and technical challenges I’ve worked on.
+  </p>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    If you're interested in seeing more, feel free to browse around! I regularly update this site, so check back for new content. You can also contact me through the links provided below for any inquiries or job opportunities.
+  </p>
+  <hr>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    Okay but seriously, this section, the border, background, title, font and color, the previous two paragraphs, and all the code was written by ChatGPT. It tried to make it a shiny, light-blue color which was gross and terrible but other than that pretty solid. 
+  </p>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    Anyway recently I've been exploring the many faces of ChatGPT (it's a way, way, way better coder than me (it did not write that I promise)) as well as running a Minecraft server for my friends. I've never been sole admin for one before so I'm just practicing scripting and backup procedures and TCP/IP stuff. 
+  </p>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    So, thanks for visiting my website! This space is a semi-professional, statically located public display written by and about myself. It is an ongoing project and not particularly serious. Check back some random time in the future, and also hit me up on social media or whatever.
+  </p>
+  <p style="color: #333; font-size: 16px; line-height: 1.6;">
+    Lastly, if you read this entire section then I'm sorry. It has absolutely no substance. I literally am just hitting buttons on a keyboard and there is nothing important hidden in the words. What a terrible world we've made for ourselves. If you read all of this section hit me up and I'll mail you a dollar.
+  </p>
+</div>
+
   </div>
   <!---->
   <p class="w3-large w3-center w3-padding-16">Some skills:</p>
@@ -133,14 +225,14 @@ body, html {
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:15%">15%</div>
   </div>
 </div>
-
+<br><br>
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3+</span><br>
+    <span class="w3-xlarge">5+</span><br>
     Pets given a home
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">20+</span><br>
+    <span class="w3-xlarge">12-</span><br>
     Plants not killed
   </div>
   <div class="w3-quarter w3-section">
@@ -148,23 +240,22 @@ body, html {
     Lines of math
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">~5000</span><br>
-    Original lines of code
+    <span class="w3-xlarge">~10000</span><br>
+    'Original' lines of code
   </div>
 </div>
-
+<hr>
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">Projects</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">Travel</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" >
-  <p class="w3-center"><em>Here are some projects and/or current interests of mine.<br> Some things I'm working on</em></p><br>
-  <p>If you're looking for minecraft then you forgot a word</p>
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <p class="w3-center"><em>Travel plans, location updates, current obsessions, and other stuff<br> Will update soon!</em></p><br>
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) 
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <img src="images/textbookGR.jpg" style="width:100%;padding-bottom:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="Textbook on General Relativity" >
@@ -177,6 +268,7 @@ body, html {
     <div class="w3-col m3">
       <img src="images/duolingo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spanish using Duolingo">
     </div>
+  -->
     <!--
     <div class="w3-col m3">
       <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
@@ -224,7 +316,7 @@ body, html {
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" >
   <h3 class="w3-center">Please don't actually contact*</h3>
-  <p class="w3-center"><em>*Note excludes job offerers</em></p>
+  <p class="w3-center"><em>*Note excludes high-paying job offerers</em></p>
   <p>Below is a map of Central-South Florida. It's where I grew up and currently live. It's hot, but I don't plan on leaving any time soon.
     That's not important anyway. What's more relevant are the links to my social media accounts which are <em>below the map</em>, at the bottom of this webpage.
     There you'll find a nearly empty GitHub profile, a barren Twitter account, and a Snapchat QR code which is useless if you have my phone number or email.
@@ -269,15 +361,15 @@ body, html {
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Do it again</a>
   <div class="w3-xlarge w3-section">
-    <a href="https://github.com/austinwmille"><i class="fa fa-github w3-hover-opacity"></i></a>
-    <a href="https://www.instagram.com/austinwmille/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-    <a href="images/discord.png"><i class="fa fa-discord w3-hover-opacity"></i></a>
-    <a href="https://twitter.com/austinwmille"><i class="fa fa-twitter w3-hover-opacity"></i></a>
-    <a href="images/snapchat.jpg"><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="https://github.com/austinwmille"><i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/austinwmille/"><i class="fab fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://discord.gg/sDSUBHH5ju" class="w3-hover-opacity"><i class="fab fa-discord"></i></a>
+    <a href="https://twitter.com/austinwmille"><i class="fab fa-twitter w3-hover-opacity"></i></a>
+    <a href="images/snapcodeBitmoji.svg"><i class="fab fa-snapchat w3-hover-opacity"></i></a>
     
   </div>
-  <p><em>Last update: August 14, 2024</em></p>
-  <p>See you space cowboy</p>
+  <p><em>Last update: October 19, 2024</em></p>
+  <p style="color: #FF7043">See you space cowboy</p>
   
 </footer>
  
@@ -292,12 +384,15 @@ function onClick(element) {
 
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
+
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        navbar.className = "w3-bar w3-card w3-animate-top";
+        navbar.style.backgroundColor = "#333"; // Keep the background dark on scroll
     } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        navbar.className = "w3-bar";
+        navbar.style.backgroundColor = "#333"; // Ensure dark background at the top as well
     }
 }
 

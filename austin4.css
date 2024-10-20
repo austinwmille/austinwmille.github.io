@@ -240,3 +240,37 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     filter: blur(0);
     transition: 0.7s ease;
 }
+
+/* Customize the hover effect */
+.w3-bar-item.w3-hover-light-grey:hover {
+    background-color: #555 !important; /* Darker grey on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Ensure navbar text stays white */
+.w3-bar-item {
+    color: #fff !important;  /* Keep text white */
+}
+
+/* Hover effect for navbar items */
+.w3-bar-item:hover {
+    background-color: #555 !important; /* Lighter grey on hover */
+    color: #fff !important; /* Text stays white on hover */
+}
+
+/* Ensure the mobile dropdown has a dark background and white text */
+.w3-bar-block {
+    background-color: #333 !important; /* Dark background for mobile menu */
+    color: #fff !important; /* White text for mobile menu */
+}
+
+/* Ensure links in the dropdown stay white */
+.w3-bar-block .w3-bar-item {
+    color: #fff !important;
+}
+
+/* Hover effect for mobile dropdown links */
+.w3-bar-block .w3-bar-item:hover {
+    background-color: #555 !important; /* Lighter grey on hover */
+    color: #fff !important; /* Keep text white */
+}
