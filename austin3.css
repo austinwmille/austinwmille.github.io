@@ -178,3 +178,73 @@ hr {
 .w3-bar-item {
     padding: 8px 16px;
 }
+
+@media screen and (max-width: 600px) {
+    #splashtxt {
+        font-size: 18px;  /* Make the splash text smaller */
+        margin-top: 0px;  /* Adjust the margin to prevent overlap */
+        margin-left: 0;  /* Center the splash text on mobile */
+        transform: none;  /* Remove the slant for better readability */
+        text-align: center;  /* Ensure it's centered on mobile */
+    }
+
+    #sig, #indextitle {
+        margin-left: 10px;  /* Reduce the left margin on mobile */
+        font-size: 20px;  /* Adjust font size to fit better */
+    }
+
+    .sigdiv {
+        margin-left: 10px;  /* Make sure the name and signature align */
+        transform: none;  /* Remove slant for better mobile display */
+    }
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: black;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Center social media icons on mobile */
+#footer .social-icons {
+    display: flex;
+    justify-content: center; /* Center the icons */
+    align-items: center;
+    flex-wrap: wrap; /* Ensure they wrap if needed */
+    margin-top: 3px; /* Add spacing if needed */
+    gap: 15px; /* Add space between the icons */
+}
+
+#footer .fa {
+    font-size: 24px;  /* Adjust size as needed */
+    color: whitesmoke;
+    margin: 5px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the icons */
+#footer .fa:hover {
+    color: #FF4500; /* Change the color on hover */
+    opacity: 0.8;
+}
+
+/* Mobile-specific adjustments for icons */
+@media (max-width: 768px) {
+    #footer .fa {
+        font-size: 20px;  /* Adjust size for mobile */
+        margin: 10px; /* Add more space if necessary */
+    }
+}
