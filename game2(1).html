@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pet Game</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Pet Care Game</h1>
+        <p>Points: <span id="points">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+        <p>Time Left: <span id="timer">30</span> seconds</p>
+
+        <img id="pet" src="pet.png" alt="Cute Pet">
+        
+        <div class="controls">
+            <button id="feed-btn">Feed</button>
+            <button id="clean-btn">Clean</button>
+        </div>
+
+        <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+        <audio id="feed-sound" src="feed.mp3" preload="auto"></audio>
+        <audio id="clean-sound" src="clean.mp3" preload="auto"></audio>
+    </div>
+
+    <script src="game2.js"></script>
+</body>
+</html>
