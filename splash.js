@@ -30,6 +30,7 @@ const randomTexts = [
     "only 59 warnings and 19 errors!",
     "bruh.",
     "kick ass and chew bubblegum",
+    "it's giving 'guillotine'",
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
