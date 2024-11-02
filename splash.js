@@ -1,10 +1,9 @@
 // splash.js
 const randomTexts = [
-    "technically online",
-    "Powered by artificial intelligence!",
+    "1/2 powered by AI!",
     "Runs on beer and cats!",
     "Astrophysicist technically!",
-    "A total loser",
+    "a total loser",
     "Certified sadboi!",
     "hacker, sort of",
     "Your minecraft boss!",
@@ -17,7 +16,7 @@ const randomTexts = [
     "will die by my own hand",
     "suicidal",
     "420 blaze it",
-    "astrologers, just...idk",
+    "read stars not horoscopes",
     "I hate everyone",
     "medicated",
     "clinically depressed :(",
@@ -29,7 +28,6 @@ const randomTexts = [
     "Objectively cooler than you",
     "only 59 warnings and 19 errors!",
     "bruh.",
-    "kick ass and chew bubblegum",
     "it's giving 'guillotine'",
 ];
 
