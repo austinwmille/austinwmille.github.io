@@ -285,3 +285,31 @@ hr {
     display: inline-block;
     margin-left: 5px;
 }
+
+/* Project item styling */
+.project-item {
+    padding: 10px;
+    border-bottom: 1px solid rgba(122, 131, 126, 0.5);
+    transition: background-color 0.3s;
+}
+
+.project-item:hover {
+    background-color: rgba(200, 200, 200, 0.1); /* Lighten background on hover */
+}
+
+/* Enhance headers in project items */
+.project-item h3 a {
+    color: #ff66c4; /* Matches the neon pink theme */
+    text-decoration: none;
+}
+
+.project-item h3 a:hover {
+    color: #FF4500; /* Hover color for links */
+}
+
+/* Improve spacing between sections */
+.cardcontainer h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #ff66c4;
+}
