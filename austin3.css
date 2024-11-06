@@ -313,3 +313,39 @@ hr {
     font-size: 1.8em;
     color: #ff66c4;
 }
+
+/* Update the card container with a gray background */
+.cardcontainer {
+    padding: 2px 16px;
+    background-color: #2e2e2e; /* Dark gray background */
+    color: whitesmoke; /* Lighter text for readability */
+    border-radius: 5px;
+}
+
+/* Project item styling */
+.project-item {
+    padding: 10px;
+    border-bottom: 1px solid #444444; /* Subtle gray border */
+    transition: background-color 0.3s;
+}
+
+.project-item:hover {
+    background-color: #3a3a3a; /* Slightly lighter gray on hover */
+}
+
+/* Neutral link colors */
+.project-item h3 a {
+    color: #cccccc; /* Light gray for links */
+    text-decoration: none;
+}
+
+.project-item h3 a:hover {
+    color: #dddddd; /* Slightly lighter gray on hover */
+}
+
+/* Improve spacing between sections */
+.cardcontainer h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: whitesmoke; /* Neutral white for headers */
+}
