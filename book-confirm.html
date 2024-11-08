@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Your Booking</title>
+    <link rel="stylesheet" href="booking.css"> <!-- Link to booking.css -->
+</head>
+<body>
+
+    <!-- Header section with thank-you message -->
+    <div class="header">
+        <h1>Thank You for Your Payment!</h1>
+        <p>Select your booking date and time below.</p>
+    </div>
+
+    <!-- Calendar container for selecting booking date and time -->
+    <div class="calendar-container">
+        <div id="calendar"></div> <!-- Calendar placeholder -->
+    </div>
+
+    <!-- Optional final confirmation button -->
+    <div class="footer">
+        <button type="button" class="final-submit">Confirm Booking</button>
+    </div>
+
+    <!-- Include FullCalendar script for calendar functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                headerToolbar: { left: 'title', right: 'today prev,next' },
+                events: '/api/availability', // Endpoint to get available dates
+                dateClick: function(info) {
+                    let time = prompt("Enter a time (e.g., 10:00 AM):");
+                    if (time) {
+                        fetch('/api/book', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ date: info.dateStr, time: time })
+                        })
+                        .then(response => response.json())
+                        .then(data => alert(data.message));
+                    }
+                }
+            });
+            calendar.render();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    background-color: #1a1f24;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ff66c4; /* Soft neon accent */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #222;
+    text-align: center;
+}
+
+#calendar {
+    max-width: 90%;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #333;
+    color: #ff66c4;
+}
+
+.paypal-button {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.paypal-button form {
+    display: inline-block;
+}
+
+.final-submit {
+    background-color: #ff66c4; /* Pink accent */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+.final-submit:hover {
+    background-color: #e655b8;
+}
