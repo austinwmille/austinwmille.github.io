@@ -335,3 +335,41 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
         padding: 6px 8px; /* Further reduce padding */
     }
 }
+
+/* Base Styles */
+#hello, #dont-panic {
+  display: inline-block;
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Updated Animation for Hello */
+#hello {
+  animation: fadeOut 4s ease-in forwards; /* Only fades out over 2 seconds */
+}
+
+/* Animation for DON'T PANIC */
+#dont-panic {
+  animation: fadeIn 3s ease-in 2s forwards; /* Fades in after Hello fades out */
+}
+
+/* Keyframes for Hello */
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start fully visible */
+  }
+  100% {
+    opacity: 0; /* Slowly fades out */
+  }
+}
+
+/* Keyframes for DON'T PANIC */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start invisible */
+  }
+  100% {
+    opacity: 1; /* Fades in fully */
+  }
+}
+
