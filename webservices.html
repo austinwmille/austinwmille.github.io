@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Building Services - Austin W. Miller</title>
+    <title>Website Building Services</title>
     <link rel="stylesheet" href="webservicesstyle.css">
 </head>
 <body>
+
+<!-- Hero Banner -->
+<div class="hero-banner">
+    <div class="overlay">
+        <h1>WebDev Services</h1>
+        <p>Fast. Custom. Modern. Webpages tailored to your needs.</p>
+    </div>
+</div>
 
 <div class="w3-container" style="padding:50px 16px">
     <h1 class="w3-center">Custom Website Building Services</h1>
@@ -67,10 +75,10 @@
         <div class="w3-row-padding w3-margin-top">
         <div class="w3-col m6">
             <div class="w3-card-4">
-                <img src="images/personal3.png" alt="Web Resume" style="width:80%">
+                <img src="images/webresume.png" alt="Web Resume" style="width:80%">
                 <div class="w3-container">
                     <h3>Web Resume</h3>
-                    <p>A clean and simple resume for access anywhere!<a href="https://austinmiller.net" target="_blank">Visit Site</a></p>
+                    <p>A clean and simple resume for access anywhere! <a href="https://austinmiller.net" target="_blank">Visit Site</a></p>
                 </div>
             </div>
         </div>
@@ -80,7 +88,7 @@
                 <img src="images/chrimbusscreenshot.png" alt="Chrimbus Celebration Site" style="width:80%">
                 <div class="w3-container">
                     <h3>Chrimbus Celebration</h3>
-                    <p>A chaotic holiday site full of humor and nonsense, inspired by a fun celebration with friends. <a href="https://chrimbus.org" target="_blank">Explore Chrimbus</a></p>
+                    <p>A chaotic holiday site full of humor and nonsense, inspired by a fun celebration with friends.</p>
                 </div>
             </div>
         </div>
@@ -118,7 +126,50 @@
     <h2 class="w3-center">Get Started</h2>
     <p class="w3-center w3-large">Ready to bring your website idea to life? Contact me to discuss your project and get a quote.</p>
     <div class="w3-center">
-        <a href="contact.html" class="w3-button w3-black w3-padding-large w3-large">Contact Me</a>
+        <a href="javascript:void(0);" class="w3-button" onclick="toggleContactCard(event)">Contact Me</a>
+    </div>
+</div>
+
+<!-- Javascript --- to --- show --- cards --- on --- scroll --- -->
+<script>
+    document.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.w3-container');
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+<!-- Javascript to ------ toggle the ------contact card ----- -->
+<script>
+    function toggleContactCard() {
+        const contactCard = document.getElementById('contact-card');
+
+        // Toggle visibility
+        if (contactCard.style.display === 'none' || !contactCard.style.display) {
+            contactCard.style.display = 'block';
+        } else {
+            contactCard.style.display = 'none';
+        }
+    }
+
+    function closeContactCard() {
+        const contactCard = document.getElementById('contact-card');
+        contactCard.style.display = 'none';
+    }
+</script>
+
+
+
+<div id="contact-card" class="contact-card">
+    <div class="contact-card-content">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> austinwmille@gmail.com</p>
+        <p><strong>Phone:</strong> (941) 545-5082</p>
+        <p><strong>Website:</strong> <a href="https://austinmiller.net" target="_blank">austinmiller.net</a></p>
     </div>
 </div>
 

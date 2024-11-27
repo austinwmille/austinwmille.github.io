@@ -31,6 +31,14 @@ a:hover {
     padding: 40px 20px;
     margin-bottom: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.w3-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Section Titles */
@@ -41,10 +49,31 @@ h1.w3-center, h2.w3-center {
     margin-bottom: 20px;
 }
 
+.w3-container:nth-child(even) {
+    background: #f9f9fc; /* Slightly lighter grey */
+}
+
+.w3-container:nth-child(odd) {
+    background: #ffffff; /* Crisp white */
+}
+
+
+.w3-container h2.w3-center {
+    font-size: 2.5em; /* Larger font size */
+    font-weight: 700;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-bottom: 2px solid #0073e6; /* Accent underline */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
 p.w3-center {
     font-size: 1.2em;
     text-align: center;
     color: #555;
+    margin-bottom: 30px;
 }
 
 /* Service Section */
@@ -90,6 +119,11 @@ p.w3-center {
     margin: 10px auto;
 }
 
+.w3-card-4 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Centered Images */
 .w3-card-4 img {
     display: block;
@@ -97,11 +131,12 @@ p.w3-center {
     width: 80%; /* Adjusted width */
     height: auto;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .w3-card-4:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
 .w3-card-4 img {
@@ -112,19 +147,20 @@ p.w3-center {
 
 /* Button Styles */
 .w3-button {
-    font-size: 1em;
-    color: #fff;
-    background-color: #0073e6;
+    font-size: 1.2em;
+    color: #0073e6; /* Accent button text */
+    background-color: #fff;
     border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
+    padding: 14px 24px;
+    border: 2px solid #fff; /* Adds elegance */
     cursor: pointer;
     transition: background-color 0.3s;
     text-align: center;
 }
 
 .w3-button:hover {
-    background-color: #005bb5;
+    background-color: #005bb5; /* Darker hover effect */
+    color: #fff; /* Invert text color */
 }
 
 /* Responsive Layouts */
@@ -153,4 +189,150 @@ p {
     line-height: 1.7;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Hero Banner Styles with Black Hole Image */
+/* Hero Banner Styles with Light Overlay */
+.hero-banner {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgba(244, 244, 249, 1) 100%), 
+                url('images/ehtblackhole.jpg') no-repeat center center/cover;
+    background-position: center 20%; /* Adjust vertical positioning */
+    height: 600px; /* Taller banner for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333; /* Dark text */
+}
+
+.hero-banner .overlay {
+    background: rgba(255, 255, 255, 0.6); /* Light grey overlay */
+    padding: 0px 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Narrower for elegance */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    position: relative; /* Allows for precise positioning */
+    top: -20px; /* Pushes overlay up by 10 pixels */
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: #222; /* Darker text for contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.55); /* Subtle shadow for readability */
+}
+
+.hero-banner p {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #444; /* Slightly lighter than header for hierarchy */
+     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Consistent with heading */
+}
+
+.w3-row-padding .w3-col {
+    margin-bottom: 30px; /* Add spacing between rows */
+}
+
+.w3-container.w3-light-grey {
+    background: linear-gradient(90deg, #d4d4d9, #c8c8ce); /* Darker grey gradient */
+    color: #333; /* Darker text for readability */
+    padding: 60px 16px; /* Maintain spacious padding */
+}
+
+.w3-container.w3-light-grey h2 {
+    color: #222; /* Slightly darker grey for headings */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.w3-button {
+    background-color: #333; /* Dark grey button */
+    color: white; /* Contrasting text */
+    border: 2px solid #333; /* Match button border */
+    padding: 14px 24px;
+    font-size: 1.2em;
+    border-radius: 5px; /* Rounded corners for elegance */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.w3-button:hover {
+    background-color: #555; /* Slightly lighter grey on hover */
+    color: #f9f9f9; /* Subtle hover contrast */
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    .w3-container {
+        padding: 20px 10px;
+    }
+
+    .w3-row-padding .w3-col {
+        margin-bottom: 20px;
+    }
+
+    .w3-button {
+        font-size: 1em; /* Smaller button text */
+        padding: 10px 20px;
+    }
+}
+
+/* Contact Card Styles */
+.contact-card {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positioned relative to the parent */
+    left: 30%; /* Align to the left edge of the parent */
+    bottom: 60px; /* Position above the button (adjust value for spacing) */
+    z-index: 1000; /* Ensure it appears above other elements */
+    background: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+}
+
+
+.contact-card-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.contact-card a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
 }
