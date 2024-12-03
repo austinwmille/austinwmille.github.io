@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎲 Gag Me Sempai! 🎁</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f7e7ff;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #d0006f;
+        }
+        button {
+            background-color: #ffd700;
+            color: #000;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff6347;
+            color: #fff;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+        }
+        .result {
+            font-size: 1.8rem;
+            color: #008080;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎲 Gag Me Sempai! 🎁</h1>
+    <p>Roll the dice and see what hilarious gag gift fate has in store for you!</p>
+    <img id="dice" src="placeholder-die-face.png" alt="Rolling Dice"> <!-- Placeholder image for the die -->
+    <button id="rollButton">Gag Me Sempai</button>
+    <div class="result" id="giftResult"></div>
+
+    <script>
+        // Gag gift list with images and Amazon links
+        const gifts = [
+            {
+                name: "A pair of socks with tacos on them 🌮🧦",
+                image: "taco-socks.jpg", // Low-res image of the gag gift
+                link: "https://www.amazon.com/dp/EXAMPLE1"
+            },
+            {
+                name: "A whoopee cushion 💨",
+                image: "whoopee-cushion.jpg",
+                link: "https://www.amazon.com/dp/EXAMPLE2"
+            },
+            {
+                name: "A mug that says 'World's Okayest Employee' ☕",
+                image: "okayest-mug.jpg",
+                link: "https://www.amazon.com/dp/EXAMPLE3"
+            },
+            {
+                name: "A glow-in-the-dark toilet seat 🚽✨",
+                image: "glow-toilet.jpg",
+                link: "https://www.amazon.com/dp/EXAMPLE4"
+            },
+            {
+                name: "A pickle-shaped Christmas ornament 🥒🎄",
+                image: "pickle-ornament.jpg",
+                link: "https://www.amazon.com/dp/EXAMPLE5"
+            },
+            {
+                name: "A tiny, inflatable unicorn 🦄",
+                image: "inflatable-unicorn.jpg",
+                link: "https://www.amazon.com/dp/EXAMPLE6"
+            }
+        ];
+
+        const dice = document.getElementById("dice");
+        const giftResult = document.getElementById("giftResult");
+        const rollButton = document.getElementById("rollButton");
+
+        rollButton.addEventListener("click", function() {
+            let rolling = true;
+            let interval;
+            let randomIndex;
+
+            // Start "rolling" the dice
+            interval = setInterval(() => {
+                randomIndex = Math.floor(Math.random() * gifts.length);
+                dice.src = gifts[randomIndex].image; // Show random gift image as dice face
+            }, 200); // Change face every 200ms
+
+            // Stop rolling after 2 seconds
+            setTimeout(() => {
+                clearInterval(interval); // Stop the rolling animation
+                rolling = false;
+
+                // Display the final result
+                const selectedGift = gifts[randomIndex];
+                dice.src = selectedGift.image; // Set final die face
+                giftResult.innerHTML = `
+                    Your gag gift: 
+                    <a href="${selectedGift.link}" target="_blank" style="color: #d0006f; text-decoration: none;">
+                        ${selectedGift.name}
+                    </a>
+                `;
+            }, 2000); // Wait 2 seconds
+        });
+    </script>
+</body>
+</html>
