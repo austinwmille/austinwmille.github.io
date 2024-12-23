@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
@@ -116,45 +117,98 @@ body, html {
     <a href="https://en.wikipedia.org/wiki/Haiku" style="text-decoration: none;">almost 俳句?</a>
   </p>
 
-  <!-- Profile Picture and Header -->
+
+
+  <!-- Profile Picture and Contact Info -->
   <div class="w3-row-padding w3-center" style="margin-top: 16px;">
     <div class="w3-half w3-center">
-      <img src="images/me.jpg" alt="pic of me when hot" style="width: 150px; border-radius: 50%;">
+      <img src="images/me.jpg" alt="Photo of Austin" style="width: 150px; border-radius: 50%;">
     </div>
     <div class="w3-half">
       <br>
-      <p>Florida, USA <br> (941) 545-5082 <br> austinwmille@gmail.com <br>
-      <a href="https://austinmiller.net/austin3.html" target="_blank">
-             <img src="images/sigrounded.png" alt="Signature logo" style="width: 30%;"/> 
-         </a>
-      <br>
-      <a href="https://github.com/austinwmille" target="_blank" style="text-decoration: none;">GitHub</a></p>
+      <p style="font-size: 14px; color: #333;">
+        Florida, USA<br>
+        (941) 545-5082<br>
+        <a href="mailto:austinwmille@gmail.com" style="text-decoration: none;">austinwmille@gmail.com</a><br>
+        <a href="https://austinmiller.net/austin3.html" target="_blank" style="text-decoration: none;">
+          <img src="images/sigrounded.png" alt="Signature logo" style="width: 30%;" />
+        </a><br>
+        <a href="https://github.com/austinwmille" target="_blank" style="text-decoration: none;">GitHub</a>
+      </p>
     </div>
   </div>
 
   <!-- Current Projects -->
   <div class="w3-row-padding" style="font-size: 14px; color: #333; margin-top: 24px;">
     <div class="w3-col m12">
-      <h5 style="color: #FF7043;">somewhat arbitrary current projects</h5>
+      <h5 style="color: #FF7043;">Current Projects</h5>
+
+      <!-- ctr+X Automated Video Processing -->
       <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <img src="images/custompc.png" alt="Custom PC Building Website" style="width: 60px; float: left; margin-right: 16px;">
-        <strong>Custom PC Building Website</strong> - Web Development & E-Commerce | Online, 2024<br>
-        Designed and built a platform for custom PC orders using HTML, CSS, and Git. Focused on user policies and streamlined ordering.
-      </div>
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <img src="images/bedrock.png" alt="Minecraft Server Setup" style="width: 60px; float: left; margin-right: 16px;">
-        <strong>Minecraft Server Setup</strong> - System Administration & Networking | Home Lab, 2022<br>
-        Currently hosting a multiplayer Minecraft server using VirtualBox Ubuntu Server. Configured DNS, TCP/IP, and port settings. Check us out!
+        <strong>ctr+X &nbsp;–&nbsp; Automated Video Processing (GitHub)</strong><br>
+        <em>2024</em><br>
+        <p style="margin-top: 8px;">
+          Developed an advanced script to automate video editing by splitting long videos into concise, viral clips using
+          <a href="https://github.com/pyannote/pyannote-audio" target="_blank">pyannote</a>. Leverages open-source large language models for transcription and audio segmentation, with customizable parameters for different setups.
+        </p>
       </div>
 
-      <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-      </script>
+      <!-- Minecraft Server Setup -->
+      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
+        <strong>Minecraft Server Setup &nbsp;–&nbsp; System Administration & Networking</strong><br>
+        <em>Home Lab | 2022</em><br>
+        <p style="margin-top: 8px;">
+          Hosting a multiplayer Minecraft server on a VirtualBox Ubuntu Server. Configured DNS, TCP/IP, and port settings to optimize performance and uptime.
+        </p>
+      </div>
 
+      <!-- Emergency Preparedness Guide -->
       <div class="w3-card" style="background-color: #f5f5f5; padding: 16px;">
-        <img src="images/couv_front.png" alt="Emergency Preparedness Guide" style="width: 50px; float: left; margin-right: 16px; margin-top: -8px;">
-        <strong>Emergency Preparedness Guide</strong> - Research & Technical Writing | Remote, 2020<br>
-        Authoring a preparedness guide using <span>\(\LaTeX\)</span> for professional formatting, focusing on region-specific planning strategies.
+        <strong>Emergency Preparedness Guide &nbsp;–&nbsp; Research & Technical Writing</strong><br>
+        <em>Remote | 2020</em><br>
+        <p style="margin-top: 8px;">
+          Authoring a comprehensive preparedness guide using \(\LaTeX\) for professional formatting, including region-specific planning strategies for families.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Employment -->
+  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
+    <div class="w3-col m12">
+      <h5 style="color: #FF7043;">Current Employment</h5>
+
+      <!-- ACD Connect -->
+      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
+        <strong>ACD Connect</strong> &mdash; Tech Support Specialist (Remote)<br>
+        <em>2024 – Present</em><br>
+        <ul style="margin: 8px 0 0 16px;">
+          <li>Providing remote tech support for hardware, software, and authentication issues.</li>
+          <li>Delivering patient solutions for customers who are new to technology.</li>
+          <li>Troubleshooting a variety of user environments and system configurations.</li>
+        </ul>
+      </div>
+
+      <!-- Nips' Solutions -->
+      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
+        <strong>Nips' Solutions</strong> &mdash; Head (Home & Travel)<br>
+        <em>2023 – Present</em><br>
+        <ul style="margin: 8px 0 0 16px;">
+          <li>Providing custom PC builds, troubleshooting, networking solutions, and electronics repair.</li>
+          <li>Delivering tailored solutions that meet clients’ needs, from small upgrades to fully built systems.</li>
+          <li>Collaborating with remote customers and partners to ensure consistent service quality.</li>
+        </ul>
+      </div>
+
+      <!-- Mellow Mushroom -->
+      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px;">
+        <strong>Mellow Mushroom</strong> &mdash; Server (Brandon, FL)<br>
+        <em>2020 – Present</em><br>
+        <ul style="margin: 8px 0 0 16px;">
+          <li>Maintaining friendly, high-quality service in a fast-paced restaurant environment.</li>
+          <li>Establishing rapport with customers and efficiently handling orders, including take-out and dine-in.</li>
+          <li>Demonstrating strong multitasking and interpersonal communication skills.</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -164,55 +218,51 @@ body, html {
     <div class="w3-col m12">
       <h5 style="color: #FF7043;">Skills</h5>
       <ul style="list-style-type: none; padding-left: 0;">
-        <li>Python Programming (Data Analysis, Backend Scripting, ML Basics)</li>
-        <li>Web Development (HTML, CSS, JavaScript, Git)</li>
-        <li>Electronics Repair and PC Building</li>
-        <li>Customer Support & Troubleshooting</li>
-        <li>Excel, SQL, Data Management & Visualization</li>
-        <li>AWS Cloud Practitioner Essentials</li>
-        <li>Server Administration & Command Line (Linux, macOS, Windows)</li>
-        <li>Git, Version Control & Collaboration</li>
+        <li><strong>Python Development:</strong> Data processing, analysis, basic ML, backend scripting.</li>
+        <li><strong>Web Development:</strong> HTML, CSS, JavaScript; experience with frameworks and Git.</li>
+        <li><strong>Data Analysis & Visualization:</strong> Excel, SQL, pandas, matplotlib.</li>
+        <li><strong>Server Administration:</strong> Linux, macOS, Windows, CLI proficiency.</li>
+        <li><strong>Hardware Troubleshooting:</strong> Electronics repair, PC building.</li>
+        <li><strong>Version Control & Remote Work:</strong> Git, Jira, Microsoft Teams, Zoom.</li>
+        <li><strong>AWS Cloud Practitioner Essentials:</strong> Cloud architecture basics.</li>
+        <li><strong>Communication & Collaboration:</strong> Strong background in customer support.</li>
       </ul>
     </div>
   </div>
 
-  <!-- Certifications & Professional Development -->
+  <!-- Education -->
   <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
     <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Certifications & Professional Development</h5>
+      <h5 style="color: #FF7043;">Education</h5>
       <ul style="list-style-type: none; padding-left: 0;">
-        <li>CS50 Certificate (Harvard on edX)</li>
-        <li>HTML5 & CSS Certification (W3C on edX)</li>
-        <li>IBM Data Science Professional Courses (Coursera)</li>
-        <li>AWS Cloud Practitioner Essentials</li>
-        <li>CompTIA A+ Certification (not renewed)</li>
-        <li>Extensive AI & Prompt Engineering Experience (ChatGPT, Sora, Canva, etc.)</li>
+        <li><strong>Fall 2022:</strong> M.S. (Incomplete) in Space Systems Engineering, Johns Hopkins University &ndash; 
+          Studied advanced spacecraft concepts prior to pivoting.
+        </li>
+        <li><strong>2020:</strong> B.S. Physics, University of South Florida &ndash; 
+          Focus on Astrophysics and Astronomy with minors in Astronomy and Chemistry.
+        </li>
+        <li><strong>2017:</strong> General Studies A.A., State College of Florida &ndash; 
+          Completed foundational coursework and transfer requirements.
+        </li>
+        <li><strong>2011–2013:</strong> Pre-Engineering, Santa Fe College &ndash; 
+          Coursework in physics and math prior to relocation.
+        </li>
       </ul>
     </div>
   </div>
 
-  <!-- Experience -->
+  <!-- Professional Development -->
   <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
     <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Experience</h5>
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>Nips' Solutions</strong>, Remote <br>
-        God | 2018 - Present <br>
-        - Provide custom PC builds, troubleshooting, networking solutions, and electronics repair. <br>
-        - Collaborate with clients to define requirements and deliver the easiest good solution.<br>
-        - Repair and refurbish electronic devices such as gaming consoles, computers, and anything else that processes information via the controlled flow of electrons.
-      </div>
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>Mellow Mushroom</strong>, Brandon, FL <br>
-        Server & Chill Dude | 2020 - Present <br>
-        - Managed customer orders, provided friendly service, and ensured customer satisfaction in a busy environment. <br>
-        - Played games on my phone while pretending to work.
-      </div>
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px;">
-        <strong>Satchel's Last Resort Animal Shelter</strong>, Volunteer | 2016 <br>
-        - Assisted with administrative duties, animal care, and managed shelter communications. <br>
-        - Basically, I walked the dogs at this no-kill shelter. They took in dogs (and cats) who were not adopted from other shelters for many different reasons. Hardest job I've ever done.
-      </div>
+      <h5 style="color: #FF7043;">Professional Development</h5>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li>Experiments with YouTube and short-form video content (Fall 2024)</li>
+        <li>Extensive AI Tools Practice (ChatGPT, Sora, Canva, etc.) (2024)</li>
+        <li>AWS Cloud Practitioner Essentials (2021–2022) – Amazon Web Services</li>
+        <li>IBM Data Science Professional Courses (2021–2022) – Coursera</li>
+        <li>CS50 (2018) – Harvard University (edX)</li>
+        <li>HTML5 & CSS Certification (Summer 2017) – W3C (edX)</li>
+      </ul>
     </div>
   </div>
 
@@ -231,15 +281,32 @@ body, html {
     </div>
   </div>
 
-  <!-- Full-Width Row for Timeline with PNG Image -->
+  <!-- Soft Skills -->
+  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
+    <div class="w3-col m12">
+      <h5 style="color: #FF7043;">Soft Skills</h5>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>Teamwork:</strong> Collaborated with diverse teams to achieve common goals.</li>
+        <li><strong>Work Ethic:</strong> Demonstrated resilience and consistent performance in challenging roles.</li>
+        <li><strong>Customer Service:</strong> 15+ years of professional interpersonal experience.</li>
+        <li><strong>Problem-Solving:</strong> Creative and analytical approach to technical issues.</li>
+        <li><strong>Adaptability:</strong> Thrives in fast-paced environments with evolving technologies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Timeline (if desired) -->
   <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
     <div class="w3-col m12">
       <h5 style="color: #FF7043;">Timeline</h5>
-      <p>Below is a visual summary of my education, employment, and location history:</p>
-      <img src="images/timeline.png" alt="Timeline of Austin W. Miller's Education, Employment, and Location History" style="width: 100%; border-radius: 8px;">
+      <p>A visual overview of my education, employment, and location history:</p>
+      <img src="images/timeline.png"
+           alt="Timeline of Austin W. Miller's Education, Employment, and Location History"
+           style="width: 100%; border-radius: 8px;">
     </div>
   </div>
 </div>
+
 
 <!-- Instructions to Host Images -->
 <!-- Ensure all images used in this HTML are uploaded to your website's images directory for proper display. -->
