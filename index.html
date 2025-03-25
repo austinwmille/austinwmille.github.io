@@ -1,486 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Austin's page</title>
+<title>nips' page</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="austin4.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="hub.css">
+<link rel="stylesheet" href="austin3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url(images/hbirdUp.jpg);
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url(images/ehtblackhole.jpg);
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url(images/rocketLaunch.jpg);
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
 </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar" style="background-color: #333;">
-    <!-- Remove the menu icon -->
-    <!-- Navbar links for Top, About, Travel, Contact, and Minecraft pages -->
-    <a href="#home" class="w3-bar-item w3-button" style="color: #fff;">
-      <i class="fa fa-arrow-up"></i> Top
-    </a>
-    <a href="#about" class="w3-bar-item w3-button" style="color: #fff;">
-      <i class="fa fa-user"></i> About
-    </a>
-    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;">
-      <i class="fa fa-plane"></i> Travel
-    </a>
-    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;">
-      <i class="fa fa-phone"></i> Contact
-    </a>
-    <a href="projects.html" class="w3-bar-item w3-button" style="color: #fff;">
-        <i class="fa fa-folder-open"></i> Projects
-    </a>
-    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;">
-      <i class="fa fa-cube"></i> Minecraft
-    </a>
-  </div>
-</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-  <!-- Navbar for small screens (mobile view), hidden on large and medium screens -->
-<div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium" style="background-color: #333;">
-    <a href="#about" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">About</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Travel updates</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Contact me</a>
-    <a href="minecraft.html" class="w3-bar-item w3-button" style="color: #fff;" onclick="toggleFunction()">Minecraft page</a>
+  <!-- Header -->
+  <header class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <div class="sigdiv">
+        <h3 id="indextitle">Austin Miller</h3>
+        <h3 id="sig">.net</h3>
+      </div>
+<div id="splashtxt" style="margin-top: 0;">
+    <script src="splash.js"></script>
+</div>   
+  </header>
 
-    <!-- Commented-out Search Button for small screens -->
-    <!-- 
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-    -->
-</div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle w3-center">
-    <span id="hello" class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Hello</span>
-    <br>
-    <span id="dont-panic" class="w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">DON'T PANIC</span>
-  </div>
-</div>
-
-
-<!-- Container (Resume Section) -->
-<div class="w3-content w3-container w3-padding-32" id="resume" style="background-color: #d9d9d9; border-radius: 8px; margin-bottom: 48px;">
-  <h3 class="w3-center" style="color: #333; padding-bottom: 16px;">a short curriculum vitae</h3>
-  <h4 class="w3-center" style="color: #FF7043;">Austin wM</h4>
-  <p class="w3-center" style="color: #333; font-size: 14px;">A weak portfolio of selected, ostensibly advanced academic work <a href="resume.html">is online</a>.<br>You can also download my full, prettier CV <a href="xtra/end of 2024 cv.pdf" download>as a PDF</a>.
-    <br>
-    I also want to die, so bad.
-    <br>
-    <a href="https://en.wikipedia.org/wiki/Haiku" style="text-decoration: none;">almost 俳句?</a>
-  </p>
-
-
-
-  <!-- Profile Picture and Contact Info -->
-  <div class="w3-row-padding w3-center" style="margin-top: 16px;">
-    <div class="w3-half w3-center">
-      <img src="images/me.jpg" alt="Photo of Austin" style="width: 150px; border-radius: 50%;">
-    </div>
+  <!-- Photo Grid -->
+  <div class="w3-row">
     <div class="w3-half">
-      <br>
-      <p style="font-size: 14px; color: #333;">
-        Florida, USA<br>
-        (941) 545-5082<br>
-        <a href="mailto:austinwmille@gmail.com" style="text-decoration: none;">austinwmille@gmail.com</a><br>
-        <a href="https://austinmiller.net/austin3.html" target="_blank" style="text-decoration: none;">
-          <img src="images/sigrounded.png" alt="Signature logo" style="width: 30%;" />
-        </a><br>
-        <a href="https://github.com/austinwmille" target="_blank" style="text-decoration: none;">GitHub</a>
-      </p>
+      <!-- Minecraft Server Card (SVG) -->
+      <a class="card-link" href="https://austinmiller.net/minecraft">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+          <!-- Dark Grass section -->
+          <rect x="0" y="0" width="100" height="50" fill="#2C5F2D" />
+          <!-- Dark Dirt section -->
+          <rect x="0" y="50" width="100" height="50" fill="#4B3621" />
+          <!-- Subtle dark grid lines -->
+          <line x1="0" y1="25" x2="100" y2="25" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="0" y1="50" x2="100" y2="50" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="0" y1="75" x2="100" y2="75" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="25" y1="0" x2="25" y2="100" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="50" y1="0" x2="50" y2="100" stroke="#1A1A1A" stroke-width="0.5"/>
+          <line x1="75" y1="0" x2="75" y2="100" stroke="#1A1A1A" stroke-width="0.5"/>
+        </svg>
+      </a>
+      <img src="images/bush.jpg" style="width:100%">
+      <!-- Resume Card -->
+      <a class="card-link" href="prof.html">
+        <img src="images/resume.png" style="width:100%">
+      </a>
+    </div>
+
+    <div class="w3-half">
+      <img src="images/couv_front.png" style="width:100%">
+      <a class="card-link" href="http://minecraft.austinmiller.net:8096">
+        <img src="images/jellyfin.png" style="width:100%">
+      </a>
+      <img src="images/marnie.jpg" style="width:100%">
+      <a class="card-link" href="http://github.com/austinwmille">
+        <img src="images/github.png" style="width:100%">
+      </a>
     </div>
   </div>
-
-  <!-- Current Projects -->
-  <div class="w3-row-padding" style="font-size: 14px; color: #333; margin-top: 24px;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Current Projects</h5>
-
-      <!-- ctr+X Automated Video Processing -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>ctr+X &nbsp;–&nbsp; Automated Video Processing (GitHub)</strong><br>
-        <em>2024</em><br>
-        <p style="margin-top: 8px;">
-          Developed an advanced script to automate video editing by splitting long videos into concise, viral clips using
-          <a href="https://github.com/pyannote/pyannote-audio" target="_blank">pyannote</a>. Leverages open-source large language models for transcription and audio segmentation, with customizable parameters for different setups.
-        </p>
-      </div>
-
-      <!-- Minecraft Server Setup -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>Minecraft Server Setup &nbsp;–&nbsp; System Administration & Networking</strong><br>
-        <em>Home Lab | 2022</em><br>
-        <p style="margin-top: 8px;">
-          Hosting a multiplayer Minecraft server on a VirtualBox Ubuntu Server. Configured DNS, TCP/IP, and port settings to optimize performance and uptime.
-        </p>
-      </div>
-
-      <!-- Emergency Preparedness Guide -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px;">
-        <strong>Emergency Preparedness Guide &nbsp;–&nbsp; Research & Technical Writing</strong><br>
-        <em>Remote | 2020</em><br>
-        <p style="margin-top: 8px;">
-          Authoring a comprehensive preparedness guide using \(\LaTeX\) for professional formatting, including region-specific planning strategies for families.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Current Employment -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Current Employment</h5>
-
-      <!-- ACD Connect -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>ACD Connect</strong> &mdash; Tech Support Specialist (Remote)<br>
-        <em>2024 – Present</em><br>
-        <ul style="margin: 8px 0 0 16px;">
-          <li>Providing remote tech support for hardware, software, and authentication issues.</li>
-          <li>Delivering patient solutions for customers who are new to technology.</li>
-          <li>Troubleshooting a variety of user environments and system configurations.</li>
-        </ul>
-      </div>
-
-      <!-- Nips' Solutions -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px; margin-bottom: 16px;">
-        <strong>Nips' Solutions</strong> &mdash; Head (Home & Travel)<br>
-        <em>2023 – Present</em><br>
-        <ul style="margin: 8px 0 0 16px;">
-          <li>Providing custom PC builds, troubleshooting, networking solutions, and electronics repair.</li>
-          <li>Delivering tailored solutions that meet clients’ needs, from small upgrades to fully built systems.</li>
-          <li>Collaborating with remote customers and partners to ensure consistent service quality.</li>
-        </ul>
-      </div>
-
-      <!-- Mellow Mushroom -->
-      <div class="w3-card" style="background-color: #f5f5f5; padding: 16px;">
-        <strong>Mellow Mushroom</strong> &mdash; Server (Brandon, FL)<br>
-        <em>2020 – Present</em><br>
-        <ul style="margin: 8px 0 0 16px;">
-          <li>Maintaining friendly, high-quality service in a fast-paced restaurant environment.</li>
-          <li>Establishing rapport with customers and efficiently handling orders, including take-out and dine-in.</li>
-          <li>Demonstrating strong multitasking and interpersonal communication skills.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Skills -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Skills</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li><strong>Python Development:</strong> Data processing, analysis, basic ML, backend scripting.</li>
-        <li><strong>Web Development:</strong> HTML, CSS, JavaScript; experience with frameworks and Git.</li>
-        <li><strong>Data Analysis & Visualization:</strong> Excel, SQL, pandas, matplotlib.</li>
-        <li><strong>Server Administration:</strong> Linux, macOS, Windows, CLI proficiency.</li>
-        <li><strong>Hardware Troubleshooting:</strong> Electronics repair, PC building.</li>
-        <li><strong>Version Control & Remote Work:</strong> Git, Jira, Microsoft Teams, Zoom.</li>
-        <li><strong>AWS Cloud Practitioner Essentials:</strong> Cloud architecture basics.</li>
-        <li><strong>Communication & Collaboration:</strong> Strong background in customer support.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Education -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Education</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li><strong>Fall 2022:</strong> M.S. (Incomplete) in Space Systems Engineering, Johns Hopkins University &ndash; 
-          Studied advanced spacecraft concepts prior to pivoting.
-        </li>
-        <li><strong>2020:</strong> B.S. Physics, University of South Florida &ndash; 
-          Focus on Astrophysics and Astronomy with minors in Astronomy and Chemistry.
-        </li>
-        <li><strong>2017:</strong> General Studies A.A., State College of Florida &ndash; 
-          Completed foundational coursework and transfer requirements.
-        </li>
-        <li><strong>2011–2013:</strong> Pre-Engineering, Santa Fe College &ndash; 
-          Coursework in physics and math prior to relocation.
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Professional Development -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Professional Development</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>Experiments with YouTube and short-form video content (Fall 2024)</li>
-        <li>Extensive AI Tools Practice (ChatGPT, Sora, Canva, etc.) (2024)</li>
-        <li>AWS Cloud Practitioner Essentials (2021–2022) – Amazon Web Services</li>
-        <li>IBM Data Science Professional Courses (2021–2022) – Coursera</li>
-        <li>CS50 (2018) – Harvard University (edX)</li>
-        <li>HTML5 & CSS Certification (Summer 2017) – W3C (edX)</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Extracurriculars -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Extracurriculars</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li>2020–Present: Filipino Martial Arts & Wing Chun student</li>
-        <li>2018–2020: Member of Astronomy Club at USF</li>
-        <li>2018–2020: Member of Society of Physics Students at USF</li>
-        <li>2014–2017: Member of American Chemical Society at State College of Florida</li>
-        <li>2016: Volunteer at Satchel's Last Resort Animal Shelter</li>
-        <li>2007–2011: Science Olympiad and Skills USA State Competitor</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Soft Skills -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Soft Skills</h5>
-      <ul style="list-style-type: none; padding-left: 0;">
-        <li><strong>Teamwork:</strong> Collaborated with diverse teams to achieve common goals.</li>
-        <li><strong>Work Ethic:</strong> Demonstrated resilience and consistent performance in challenging roles.</li>
-        <li><strong>Customer Service:</strong> 15+ years of professional interpersonal experience.</li>
-        <li><strong>Problem-Solving:</strong> Creative and analytical approach to technical issues.</li>
-        <li><strong>Adaptability:</strong> Thrives in fast-paced environments with evolving technologies.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Timeline (if desired) -->
-  <div class="w3-row-padding" style="margin-top: 24px; font-size: 14px; color: #333;">
-    <div class="w3-col m12">
-      <h5 style="color: #FF7043;">Timeline</h5>
-      <p>A visual overview of my education, employment, and location history:</p>
-      <img src="images/timeline.png"
-           alt="Timeline of Austin W. Miller's Education, Employment, and Location History"
-           style="width: 100%; border-radius: 8px;">
-    </div>
-  </div>
+  
+<!-- End Page Content -->
 </div>
 
-
-<!-- Instructions to Host Images -->
-<!-- Ensure all images used in this HTML are uploaded to your website's images directory for proper display. -->
-<!-- Update the 'src' attributes of the images if they are hosted in a different location or use relative paths as needed. -->
-
-
-  <!-- Explanation Section (After Resume) -->
-<div class="w3-content w3-container w3-padding-32" id="about" style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 48px; padding: 16px;">
-  <h4 style="color: #555; text-align: center; font-weight: bold;">More About This Website</h4>
-  <p style="color: #333; font-size: 16px; line-height: 1.6;">
-    This website is a blend of my professional and personal projects, designed to showcase my skills in various fields. It's an ongoing project that began as a way to practice using AWS and Python for astrophysics-related, data-intensive programming tasks. 
-    Over time, I incorporated front-end web development skills, using templates and improving my design through trial and error. You'll find a mix of personal projects, experiments, and technical challenges I’ve worked on--and also a ton of nonsense if you look hard enough.
-  </p>
-  <p style="color: #333; font-size: 16px; line-height: 1.6;">
-    If you're interested in seeing more, feel free to browse around! I regularly update this site, so check back for new content. You can also contact me through the links provided in the footer for any inquiries, job opportunities, or general mischief.
-  </p>
-  <hr>
-  <p style="color: #333; font-size: 16px; line-height: 1.6;">
-    Mostly I've been exploring the many faces of ChatGPT this year. If you aren't right now, you should be using AI tools almost every day. They are very good.
-  </p>
-  <p style="color: #333; font-size: 16px; line-height: 1.6;">
-    Anyway, thanks for visiting my website! This space is a semi-professional, statically located public display written by and about myself. It is an ongoing project and not particularly serious. Check back some random time in the future, and also hit me up on social media or whatever. Lastly, an even less professional display of my free time are on my <a href="austin3.html">dark pages</a>.
-  </p>
-</div>
-
-  <!-- Personal Photo Section -->
-<div class="w3-col m6 w3-center w3-padding-large" id="photo-container">
-    <img src="images/imsecretlysanta.jpg" class="w3-round w3-image w3-hover-opacity-off" id="personal-photo" alt="I'm secretly santa" width="500" height="333">
-</div>
-
-  </div>
-  <!---->
-  <p class="w3-large w3-center w3-padding-16">Some skills:</p>
-  <p class="w3-wide"><i class="fa fa-book"></i>Picking up new skills</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">80%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-check-square-o"></i>Sticking with them</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:60%">75%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-pie-chart"></i>Rating my skills</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:15%">15%</div>
-  </div>
-</div>
-<br><br>
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">5+</span><br>
-    Pets given a home
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">12-</span><br>
-    Plants not killed
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">Uncountable</span><br>
-    Lines of math
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">~10000</span><br>
-    'Original' lines of code
-  </div>
-</div>
-<hr>
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">Travel</span>
-  </div>
-</div>
-
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" >
-  <p class="w3-center"><em>Travel plans, location updates, current obsessions, and other stuff<br> Will update soon!</em></p><br>
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) 
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="images/textbookGR.jpg" style="width:100%;padding-bottom:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="Textbook on General Relativity" >
-    </div>
-    
-    <div class="w3-col m3">
-      <img src="images/piano.jpg" style="width:100%;padding-bottom:10px" onclick="onClick(this)" class="w3-hover-opacity" alt="Piano">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="images/duolingo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Spanish using Duolingo">
-    </div>
-  -->
-    <!--
-    <div class="w3-col m3">
-      <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>-->
-    <!--
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-    -->
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">Contact</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" >
-  <h3 class="w3-center">Please don't actually contact*</h3>
-  <p class="w3-center"><em>*Note excludes high-paying job offerers</em></p>
-  <p>Below is a map of Central-South Florida. It's where I grew up and currently live. It's hot, and I plan on leaving in the next 5 years. I'm working on a plan-- anyway, that's not important. 
-    What's more relevant (barely) are the links to my social media accounts which are <em>below the map</em>, at the bottom of this webpage.
-    There you'll find a GitHub trove of broken repos, a totally barren Twitter feed, and a Snapchat QR code which is completely useless if you have my phone number.
-  </p>
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="images/map.png" class="w3-image w3-round w3-hover-opacity" style="width:100%" onclick="onClick(this)" alt="Map of Central-South Florida">
-    </div>
-    
-    <div class="w3-col m8 w3-panel">
-      <!--
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-        -->
-        <p style="font-size: 18px;">
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
             ...well, thanks for checking out my website. I think that's all I have for now.
             <span style="font-size: 17px;"> If you're here to consider paying me to work for you, well, then you probably shouldn't.</span>
-            <span style="font-size: 16px;"> I mean, you couldn't decide and proceeded to read my <i>entire</i> homepage?</span>
+            <span style="font-size: 16px;"> I mean, you couldn't decide and proceeded to scope the <i>entire</i> homepage?</span>
             <span style="font-size: 15px;"> What are you even doing? Are you being paid for this?</span>
             <span style="font-size: 14px;"> What sort of company do you <i>work for</i>, even?</span>
             <span style="font-size: 13px;"> Probably a super <b>lame</b> one!</span>
@@ -491,30 +84,20 @@ body, html {
             <span style="font-size: 8px;"> I bet the pay is small too.</span>
             <span style="font-size: 7px;"> Probably has a terrible work-life balance as well.</span>
             <span style="font-size: 6px;"> Sounds awful, honestly.</span>
-            <span style="font-size: 5px;"> I hope you find something better.</span>
-            <span style="font-size: 5px;"> Just for <i>you</i>, <b>I'll</b> work there instead!</span>
+            <span style="font-size: 5px;"> I hope you find something better!</span>
+            <span style="font-size: 5px;"> Just for <i>you</i>, <b>I'll</b> take your spot!</span>
             <span style="font-size: 4px;"> You deserve it.</span>
             <span style="font-size: 3px;"> Take a break.</span>
             <span style="font-size: 3px;"> For real.</span>
-            <span style="font-size: 2px;"> Hire me <3.</span>
-          
-
+            <span style="font-size: 2px;"> Hire me &lt;3.</span>
+        
           <br><br>
           Happy trails partner
-        </p>
-      <!--</form>-->
-    </div>
-<!--
-    <p><script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e2" data-zoneid="5476576"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script></p>
--->
-  </div>
-</div>
-
-<!-- Footer -->
+        
+</footer>
+ 
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Do it again</a>
+  <a href="#" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Do it again</a>
   <div class="w3-xlarge w3-section">
     <a href="https://github.com/austinwmille"><i class="fab fa-github w3-hover-opacity"></i></a>
     <a href="https://www.instagram.com/austinwmille/"><i class="fab fa-instagram w3-hover-opacity"></i></a>
@@ -523,34 +106,10 @@ body, html {
     <a href="images/snapcodeBitmoji.svg"><i class="fab fa-snapchat w3-hover-opacity"></i></a>
     
   </div>
-  <p><em>Last update: October 19, 2024</em></p>
+  <p><em>Last update: March 25, 2025</em></p>
   <p style="color: #FF7043">See you space cowboy</p>
   
 </footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar w3-card w3-animate-top";
-        navbar.style.backgroundColor = "#333"; // Keep the background dark on scroll
-    } else {
-        navbar.className = "w3-bar";
-        navbar.style.backgroundColor = "#333"; // Ensure dark background at the top as well
-    }
-}
-</script>
 
 </body>
 </html>
