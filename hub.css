@@ -280,6 +280,10 @@ a.card-link:hover {
   padding-bottom: 16px; /* Optional: add padding so it looks neat */
 }
 
+.w3-row img {
+	margin-bottom: -8px;
+}
+
 footer {
   margin: 0;
   padding: 0;
@@ -299,4 +303,82 @@ footer {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
+}
+
+@media only screen and (max-width: 600px) {
+  .w3-half {
+    width: 49.9999% !important;
+  }
+}
+
+body {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInPage 1.5s ease-out forwards;
+  body {font-family: "Raleway", Arial, sans-serif};
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.02);
+  }
+  45% {
+    transform: scale(1.03);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  75% {
+    transform: scale(1.02);
+  }
+  90% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  a.card-link {
+    animation: breathe 4s infinite;
+    will-change: transform;
+  }
+}
+
+/* Remove or override the W3 classes that might fade the header */
+#header.w3-hover-opacity-off:hover,
+#header.w3-opacity:hover {
+  /* neutralize them */
+  opacity: 1 !important;
+}
+
+/* Force black once clicked */
+#header.clicked,
+#header.clicked:hover {
+  background-color: #000 !important;
+  opacity: 1 !important;
+}
+
+#header {
+  position: relative;
+  overflow: hidden; /* keeps the bouncing text inside */
+  padding: 0px;    /* or reduce if you want more room */
 }
