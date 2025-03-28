@@ -1,8 +1,8 @@
 <?php
 // Replace with your router's public IP
-$routerPublicIP = '24.164.18.89';
-$internalURL   = 'http://eero:8096';
-$publicURL     = 'http://minecraft.austinmiller.net:8096';
+$routerPublicIP = 'vgr325b3t';
+$internalURL   = 'bgtrewn65n';
+$publicURL     = 'http://minecraft.austinmiller.net:bvg5b31';
 
 // Get the visitor's IP address
 $visitorIP = $_SERVER['REMOTE_ADDR'];
