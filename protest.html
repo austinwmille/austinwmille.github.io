@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Action Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"] {
+      width: calc(100% - 22px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .results {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Local Action Finder</h1>
+    <p>Enter your Zip Code to find nearby protests, actions, and news:</p>
+    <form id="zipForm">
+      <input type="text" id="zipCode" name="zipCode" placeholder="Enter Zip Code" required>
+      <button type="submit">Search</button>
+    </form>
+    <div class="results" id="results">
+      <!-- Search results will appear here -->
+    </div>
+  </div>
+  <script>
+    document.getElementById("zipForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+      const zip = document.getElementById("zipCode").value.trim();
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = `<p>Searching for actions near: ${zip}...</p>`;
+      
+      try {
+        // Get latitude/longitude for the zip code
+        const geoResponse = await fetch(`https://api.zippopotam.us/us/${zip}`);
+        if (!geoResponse.ok) {
+          resultsDiv.innerHTML = `<p>Error: Invalid zip code or unable to fetch location data.</p>`;
+          return;
+        }
+        const geoData = await geoResponse.json();
+        const place = geoData.places[0];
+        const latitude = place.latitude;
+        const longitude = place.longitude;
+        
+        // Display the found location
+        resultsDiv.innerHTML = `<p>Location found: ${place["place name"]}, ${geoData["state"]}</p>`;
+        
+        // Now, use latitude/longitude to get nearby actions/protests.
+        // Replace the URL below with your actual events API endpoint.
+        const eventsUrl = `https://your-event-api.com/events?lat=${latitude}&lng=${longitude}`;
+        
+        // For demo purposes, we'll simulate this API call.
+        // Uncomment the fetch below and comment out the simulation block when you have an actual endpoint.
+        /*
+        const eventsResponse = await fetch(eventsUrl);
+        if (!eventsResponse.ok) {
+          resultsDiv.innerHTML += `<p>No event data available at this time.</p>`;
+          return;
+        }
+        const eventsData = await eventsResponse.json();
+        */
+        
+        // Simulation of events data
+        const eventsData = [
+          {
+            title: "Peaceful Protest Downtown",
+            description: "A community rally to discuss local civic actions.",
+            time: "Today at 5:00 PM"
+          },
+          {
+            title: "Civic Action Workshop",
+            description: "Learn how to get involved and organize in your area.",
+            time: "Tomorrow at 10:00 AM"
+          }
+        ];
+        
+        // Display the events
+        if (eventsData.length === 0) {
+          resultsDiv.innerHTML += `<p>No events found near ${zip}.</p>`;
+        } else {
+          let eventsHTML = `<h2>Events near ${zip}</h2><ul>`;
+          eventsData.forEach(event => {
+            eventsHTML += `<li>
+              <strong>${event.title}</strong><br>
+              ${event.description}<br>
+              <em>${event.time}</em>
+            </li>`;
+          });
+          eventsHTML += `</ul>`;
+          resultsDiv.innerHTML += eventsHTML;
+        }
+      } catch (error) {
+        console.error(error);
+        resultsDiv.innerHTML = `<p>An error occurred while fetching data. Please try again later.</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
