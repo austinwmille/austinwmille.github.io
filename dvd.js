@@ -2,51 +2,48 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sig       = document.getElementById('sig');
   const container = document.getElementById('header');
+  sig.style.position = 'fixed';
 
-  // Float the sig absolutely in viewport space:
-  sig.style.position = 'fixed';  
-
-  // state vars:
-  let x = 0, y = 0,
-      dx = 2, dy = 2,
-      sW, sH, cW, cH,
-      headerRect;
+  let x = 0, y = 0, dx = 2, dy = 2;
+  let sW, sH, cW, cH, headerRect;
 
   function measure() {
-    headerRect = container.getBoundingClientRect();  
-    cW = headerRect.width;
-    cH = headerRect.height;
-    sW = sig.offsetWidth;
-    sH = sig.offsetHeight;
-
-    // On first run, center it:
+    headerRect = container.getBoundingClientRect();
+    cW = headerRect.width;   cH = headerRect.height;
+    sW = sig.offsetWidth;    sH = sig.offsetHeight;
     if (x === 0 && y === 0) {
-      x = (cW - sW) / 2;
-      y = (cH - sH) / 2;
+      x = (cW - sW)/2;
+      y = (cH - sH)/2;
     }
   }
 
-  // initial measurement + catch window resizes
-  measure();
   window.addEventListener('resize', measure);
+  measure();
+
+  // clean up the pulse class after animation ends
+  sig.addEventListener('animationend', () => {
+    sig.classList.remove('pulse');
+  });
 
   function loop() {
-    // move
-    x += dx;
-    y += dy;
+    x += dx; y += dy;
+    let bounced = false;
 
-    // bounce X
     if (x <= 0 || x + sW >= cW) {
       dx = -dx;
-      x = Math.max(0, Math.min(x, cW - sW));
+      x  = Math.min(Math.max(0, x), cW - sW);
+      bounced = true;
     }
-    // bounce Y
     if (y <= 0 || y + sH >= cH) {
       dy = -dy;
-      y = Math.max(0, Math.min(y, cH - sH));
+      y  = Math.min(Math.max(0, y), cH - sH);
+      bounced = true;
     }
 
-    // place the sig in viewport coords:
+    if (bounced) {
+      sig.classList.add('pulse');
+    }
+
     sig.style.left = `${headerRect.left + x}px`;
     sig.style.top  = `${headerRect.top  + y}px`;
 

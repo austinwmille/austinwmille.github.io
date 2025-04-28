@@ -377,3 +377,21 @@ body {
   position: relative;
   overflow: hidden; /* keeps the bouncing text inside */
 }
+
+/* pulse animation on bounce */
+@keyframes bouncePulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+#sig {
+  /* dark-orange base */
+  color: #CC5500 !important;
+
+  /* slight neon glow */
+  text-shadow:
+    0 0 4px rgba(204, 85, 0, 0.7),
+    0 0 8px rgba(255, 120, 0, 0.5),
+    0 0 16px rgba(255, 120, 0, 0.3);
+}
