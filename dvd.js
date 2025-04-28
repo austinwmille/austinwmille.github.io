@@ -1,59 +1,57 @@
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(() => {
-    var header = document.getElementById('header');
-    var sig = document.getElementById('sig');
+// dvd.js
+document.addEventListener('DOMContentLoaded', () => {
+  const sig       = document.getElementById('sig');
+  const container = document.getElementById('header');
 
-    // Ensure header is the bouncing container.
-    header.style.position = 'relative';
-    header.style.overflow = 'hidden';
+  // Float the sig absolutely in viewport space:
+  sig.style.position = 'fixed';  
 
-    // Calculate header dimensions and center .net initially.
-    var containerWidth = header.clientWidth;
-    var containerHeight = header.clientHeight;
-    var elementWidth = sig.offsetWidth;
-    var elementHeight = sig.offsetHeight;
+  // state vars:
+  let x = 0, y = 0,
+      dx = 2, dy = 2,
+      sW, sH, cW, cH,
+      headerRect;
 
-    var posX = (containerWidth - elementWidth) / 2;
-    var posY = (containerHeight - elementHeight) / 2;
+  function measure() {
+    headerRect = container.getBoundingClientRect();  
+    cW = headerRect.width;
+    cH = headerRect.height;
+    sW = sig.offsetWidth;
+    sH = sig.offsetHeight;
 
-    sig.style.position = 'absolute';
-    sig.style.left = posX + 'px';
-    sig.style.top = posY + 'px';
-  }, 500);
-    // Delay the bounce start by 4 seconds (4000 ms).
-    setTimeout(function(){
-      startBouncing(sig, header);
-    }, 4000);
-  });
-
-  function startBouncing(element, container) {
-    var containerWidth = container.clientWidth;
-    var containerHeight = container.clientHeight;
-    var elementWidth = element.offsetWidth;
-    var elementHeight = element.offsetHeight;
-
-    var posX = parseFloat(element.style.left) || 0;
-    var posY = parseFloat(element.style.top) || 0;
-    var dx = 2;
-    var dy = 2;
-
-    function animate() {
-      posX += dx;
-      posY += dy;
-
-      // Bounce off horizontal edges.
-      if (posX + elementWidth > containerWidth || posX < 0) {
-        dx = -dx;
-      }
-      // Bounce off vertical edges.
-      if (posY + elementHeight > containerHeight || posY < 0) {
-        dy = -dy;
-      }
-
-      element.style.left = posX + 'px';
-      element.style.top = posY + 'px';
-
-      requestAnimationFrame(animate);
+    // On first run, center it:
+    if (x === 0 && y === 0) {
+      x = (cW - sW) / 2;
+      y = (cH - sH) / 2;
     }
-    animate();
-}
+  }
+
+  // initial measurement + catch window resizes
+  measure();
+  window.addEventListener('resize', measure);
+
+  function loop() {
+    // move
+    x += dx;
+    y += dy;
+
+    // bounce X
+    if (x <= 0 || x + sW >= cW) {
+      dx = -dx;
+      x = Math.max(0, Math.min(x, cW - sW));
+    }
+    // bounce Y
+    if (y <= 0 || y + sH >= cH) {
+      dy = -dy;
+      y = Math.max(0, Math.min(y, cH - sH));
+    }
+
+    // place the sig in viewport coords:
+    sig.style.left = `${headerRect.left + x}px`;
+    sig.style.top  = `${headerRect.top  + y}px`;
+
+    requestAnimationFrame(loop);
+  }
+
+  loop();
+});

@@ -259,18 +259,23 @@ svg {
 a.card-link {
   display: block;
   text-decoration: none;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  animation:
+    breathe 6s ease-in-out infinite,
+    shadow-pulse 6s ease-in-out infinite;
 }
 
 /* Hover effect for images and inline SVGs within a card-link */
 a.card-link:hover img,
 a.card-link:hover svg {
-  transform: scale(1.05);
+  transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
 /* Optional: Add a subtle box shadow on hover for extra pop */
 a.card-link:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
   transition: box-shadow 0.3s ease;
 }
 
@@ -330,29 +335,20 @@ body {
 }
 
 @keyframes breathe {
-  0% {
+  0%, 100% {
     transform: scale(1);
   }
-  15% {
-    transform: scale(1.01);
+  50% {
+    transform: scale(1.05);
   }
-  30% {
-    transform: scale(1.02);
+}
+
+@keyframes shadow-pulse {
+  0%, 100% {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-  45% {
-    transform: scale(1.03);
-  }
-  60% {
-    transform: scale(1.03);
-  }
-  75% {
-    transform: scale(1.02);
-  }
-  90% {
-    transform: scale(1.01);
-  }
-  100% {
-    transform: scale(1);
+  50% {
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
   }
 }
 
@@ -380,5 +376,4 @@ body {
 #header {
   position: relative;
   overflow: hidden; /* keeps the bouncing text inside */
-  padding: 0px;    /* or reduce if you want more room */
 }
