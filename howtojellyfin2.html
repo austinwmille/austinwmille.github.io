@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jellyfin</title>
+<link rel="stylesheet" href="austin3.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    .flowchart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .step {
+        background-color: #2e2e2e;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        text-align: center;
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .arrow {
+        font-size: 2em;
+        color: #ff66c4;
+        animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .logo img {
+        width: 180px;
+        max-width: 80%;
+    }
+</style>
+</head>
+
+<body>
+    <div class="sigdiv">
+        <h3 id="indextitle">Austin Miller</h3>
+        <h3 id="sig">.net</h3>
+    </div>
+
+    <div id="splashtxt"></div>
+    <script src="splash.js"></script>
+
+    <div class="topnav" id="myTopnav">
+        <a href="austin3.html"><i class="fa fa-home" title="Home"></i></a>
+        <a href="projects.html"><i class="fa fa-briefcase" title="Projects"></i></a>
+        <a href="resume.html"><i class="fa fa-file-alt" title="Resume"></i></a>
+        <a href="about.html"><i class="fa fa-user" title="About"></i></a>
+        <a href="minecraft.html"><i class="fa fa-cube" title="Minecraft"></i></a>
+        <a href="jellyfin.html" class="active"><i class="fa fa-film" title="Jellyfin"></i></a>
+        <a href="index.html"><i class="fa fa-user-tie" title="Professional Portfolio"></i></a>
+    </div>
+
+    <hr id="topnavhr">
+
+    <div class="logo">
+        <img src="images/jellyfin-logo.png" alt="Jellyfin Logo">
+    </div>
+
+    <div class="flowchart">
+        <!-- Phone/Computer path -->
+        <div class="step">
+            <h2>📱 Phone / 💻 Computer</h2>
+            <p>Open a browser and go to:</p>
+            <b>jellyfin.austinmiller.net</b>
+            <p>Sign in with your account → done!</p>
+        </div>
+
+        <div class="arrow">⬇</div>
+
+        <!-- Roku path -->
+        <div class="step">
+            <h2>📺 Roku</h2>
+            <ol style="text-align:left; max-width:300px; margin:auto;">
+                <li>Download the <b>Jellyfin app</b> from the Roku Channel Store.</li>
+                <li>Open the app → type in: <b>jellyfin.austinmiller.net</b></li>
+                <li>If you see the profile pictures, it worked.</li>
+                <li>Sign in to your account → done!</li>
+            </ol>
+        </div>
+    </div>
+
+    <br><br>
+    <div align="center">
+        <p><em>Last update: October 1, 2025</em></p>
+        <p style="color: #FF7043">Enjoy the show 🍿</p>
+    </div>
+
+    <div class="footer" id="footer">
+        <a href="https://www.instagram.com/austinwmille/" class="fab fa-instagram"></a>
+        <a href="images/snapchat.jpg" class="fab fa-snapchat"></a>
+        <a href="https://github.com/austinwmille" class="fab fa-github"></a>
+        <a href="https://twitter.com/austinwmille" class="fab fa-twitter"></a>
+        <a href="https://discord.gg/sDSUBHH5ju" class="fab fa-discord"></a>
+    </div>
+</body>
+</html>

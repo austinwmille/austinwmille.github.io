@@ -20,7 +20,7 @@ const randomTexts = [
     "I hate everyone",
     "medicated",
     "clinically depressed :(",
-    "goddoesnotwearabuttplug",
+    "godwearsabuttplug",
     "actually not gay",
     "theif",
     "death to the bourgeoisie!",

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to connect to my Jellyfin server</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fafafa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        margin-top: 30px;
+        color: #0b5394;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .logo img {
+        width: 200px;
+        max-width: 80%;
+    }
+
+    .flowchart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 0 20px;
+    }
+
+    .step {
+        background: white;
+        border: 2px solid #0b5394;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .step h2 {
+        margin-top: 0;
+        color: #0b5394;
+    }
+
+    .arrow {
+        font-size: 2em;
+        color: #ff66c4;
+        animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(8px); }
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #777;
+        border-top: 1px solid #ddd;
+    }
+
+    .or-divider {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #777;
+    margin: 10px 0;
+    position: relative;
+    text-align: center;
+    }
+
+    .or-divider::before,
+    .or-divider::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background: #ccc;
+    }
+
+    .or-divider::before {
+        left: 0;
+    }
+
+    .or-divider::after {
+        right: 0;
+    }
+    </style>
+</head>
+<body>
+
+    <h1>How to connect to my Jellyfin server</h1>
+
+    <div class="logo">
+        <a href="https://jellyfin.austinmiller.net"><img src="images/jellyfin.png" alt="Jellyfin Logo"></a>
+    </div>
+
+    <div class="flowchart">
+        <!-- Phone/Computer -->
+        <div class="step">
+            <h2>📱 Phone / 💻 Computer</h2>
+            <p>Open your browser and go to:</p>
+            <b>jellyfin.austinmiller.net</b>
+            <p>You should see the profile pictures immediately!</p>
+            <p>Click your profile (I chose a picture and name) → Type your password (I set one for you)</p>
+            <b>If it worked you should see some movies and/or TV shows and you're all done</b><br>
+            <b>If it said you "couldn't connect" or "couldn't sign in" then you just typed the password wrong. Usually they're all lowercase so check that and try again.</b><br>
+            <p>Text me what you want your password to be and I'll just set it for you!</p>
+        </div>
+
+        <div class="or-divider">OR</div>
+
+        <!-- Roku -->
+        <div class="step">
+            <h2>📺 Roku</h2>
+            <ol style="text-align:left; max-width:300px; margin:auto;">
+                <li>Download the <b>Jellyfin app</b> from the Roku Channel Store. Open it!</li>
+                <li>It should ask for a "server address" or "IP address". Type in: <b>jellyfin.austinmiller.net</b></li>
+                and connect/'press enter'/click the arrow'
+                <li>If you see profile pictures, you’re in!</li>
+                <li>Sign in with your account → done!</li>
+                <li>If you don't see the profiles then something went wrong</li>
+                <li>If you saw the pictures but couldn't sign in then your password is wrong. Text me to update it. It takes like 20 seconds.</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        <p><em>Last updated: October 1, 2025</em></p>
+        <p style="color:#0b5394;">May death come swiftly for us all</p>
+        <!-- Reuse your footer links here -->
+    </footer>
+
+</body>
+</html>
